@@ -25,7 +25,7 @@ main{
 }
 
 h1{
-  color: #B21F50; /* color 2*/
+  color: #B21F50;
   text-align: center;
   font-size: 2em;
   line-height: 2;
@@ -40,7 +40,7 @@ p{
 }
 
 a{
-  color: #B21F50; /* color 3*/
+  color: #B21F50;
   font-size: 16px;
   text-decoration-line: underline;
   text-decoration-style: wavy;
@@ -52,7 +52,7 @@ a:focus{
 
 table{
     border: 2px solid #000000;
-    /* border-collapse:separate; */
+    border-collapse: separate;
     border-radius:10px;
     margin-left: auto;
     margin-right: auto;
@@ -66,16 +66,17 @@ table{
   text-align: center;
   text-transform: uppercase;
 }
-.colhead:first-of-type{
+.colhead:first-child{
   border-top-left-radius: 10px;
 }
-.colhead:last-of-type{
+.colhead:last-child{
   border-top-right-radius: 10px;
 }
 .rowhead{
   border-right: 2px solid #000000 ;
   border-top: 2px solid #000000 ;
   padding: 10px;
+  text-align: center;
 }
 
 td{
@@ -89,14 +90,19 @@ tr:nth-child(even){
 }
 
 tr:hover {
-  background-color:rgb(126,8,48,0.25);
+  background-color:rgba(126, 8, 32,.25);
 }
 
-tr:hover td {
-  background-color: transparent;
+tr:last-child
+th.rowhead{
+  border-bottom-left-radius: 10px;
 }
 
-footer p{
+tr:last-child 
+td:last-child{
+  border-bottom-right-radius: 10px;
+}
+footer{
   position: fixed;
   left: 0;
   bottom: 0;
@@ -106,21 +112,3 @@ footer p{
   color: #FFFFFF;
   min-height: 75px;
 }
-/* *{
-
-}
-
-thead tr:first-child th:first-child{
-
-} */
-
-tr:last-of-type:last-child 
-th.rowhead{
-  border-bottom-left-radius: 10px;
-}
-
-tr:last-of-type:last-child 
-td:last-of-type{
-  border-bottom-right-radius: 10px;
-}
-
